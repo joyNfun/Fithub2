@@ -74,28 +74,45 @@ nav ul li a:hover {
 }
 
 
-/* Workout Container */
-.workout-container {
-    display: flex; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
-
+ /* Workout Container Adjustments for Mobile */
+ .workout-container {
+    display: flex;
+    justify-content: space-between; /* Ensure all items stay in one row */
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    gap: 25px; 
 }
 
-/* Workout Item */
 .workout-item {
-    flex: 1; 
-    margin: 10px; 
+    flex: 1; /* Allow items to grow and fill the row */
+    display: flex;
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center align content */
     text-align: center; 
+ 
 }
 
-
-
-/* Image Styling */
-.class-image {
-    max-width: 500px; 
-    width: 100%; 
+.workout-item .class-image {
+    width: 100%; /* Make image responsive */
     height: auto;
+    margin-bottom: 5px; /* Space below images */
+}
+
+.class-image {
+    width: 50%; /* Make image responsive */
+    height: auto;
+    margin-bottom: 5px; /* Space below images */
+}
+
+}
+
+/* Button Styles */
+.cta-button {
+    display: inline-block;
+    background-color: #066666;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 /* Program Container */
@@ -108,11 +125,13 @@ nav ul li a:hover {
 /* Program Item */
 .program-item {
     display: flex; 
-    align-items: flex-start; 
-    width: 100%; 
-    max-width: 800px; 
+    align-items: center; 
     gap: 20px; 
-    margin-bottom: 20px; 
+    padding: 20px; /* Add padding */
+    border: 1px solid #ddd; /* Add light border */
+    border-radius: 8px; /* Round corners for a card effect */
+    background-color: #f9f9f9; /* Light background color */
+    margin-bottom: 20px; /* Space between program items */
 }
 
 
@@ -290,29 +309,87 @@ footer {
 /* Media Query for Mobile View */
 @media screen and (max-width: 768px) {
     .header-container {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
-        gap: 10px; 
+        gap: 10px;
         padding-top: 10px;
     }
 
     .hero .top-banner {
-        width: 100%; 
+        width: 100%;
         max-height: 200px;
     }
 
+    /* Workout Container Adjustments for Mobile */
     .workout-container {
-        flex-wrap: nowrap; /* Keep all items in one row */
-        gap: 5px; /* Minimal gap between items */
+        display: flex;
+        justify-content: space-between; /* Ensure all items stay in one row */
+        flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+        gap: 10px; /* Minimal gap between items */
     }
 
     .workout-item {
-        flex: 1 1 32%; /* Adjust width to fit all items */
-        margin: 2px; /* Further reduce margin */
+        flex: 1; /* Allow items to grow and fill the row */
+        display: flex;
+        flex-direction: column; /* Stack image and button vertically */
+        align-items: center; /* Center align content */
+        text-align: center; 
     }
+
+    .class-image {
+        width: 100%; /* Make image responsive */
+        height: auto;
+        margin-bottom: 75px; /* Minimal space under image */
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: #066666;
+        color: white;
+        padding: 10px 15px; /* Button padding */
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        margin-top: 5px; /* Space above buttons */
+        margin-bottom: 70px;
+    }
+
+    .cta-button:hover {
+        background-color: #218838;
+    }
+
+    
+    .program-item {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: left; /* Align text to the left */
+        padding: 15px; /* Adjust padding for compact look */
+    }
+
+    .program-item .class-image {
+        width: 80%; /* Slightly larger image */
+        max-width: 300px;
+        margin-bottom: 5px; /* Minimal space under image */
+    }
+
+    .program-details {
+        margin: 0; /* Remove extra margins */
+        padding: 0; /* Remove padding */
+    }
+
+    .program-details ul {
+        padding-left: 15px; /* Left-align bullet points */
+    }
+
+    .program-item .cta-button {
+    
+        margin-top: -80px; /* Minimal space between text and button */
+        margin-bottom: -50px;
+    }
+
+
 }
