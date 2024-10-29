@@ -3,42 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - FitHub</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Workouts - FitHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Responsive iframe styling */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <img src="images/logo.png" alt="FitHub Logo" class="logo">
+            <img src="../images/logo.png" alt="FitHub Logo" class="logo">
             <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
                     <li><a href="workouts.html">Workouts</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="../programs/programs.html">Programs</a></li>
+                    <li><a href="../faq/faq.html">FAQ</a></li>
+                    <li><a href="../contact/contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="content">
-        <h2>Workouts</h2>
-        <p>Coming soon .........</p>
-        <br>
-        <br>
-        <br>
+        <h2>Cardio Workouts</h2>
+        <p>Explore these cardio workout videos for effective home exercise routines.</p>
         
-       
+        <div class="workout-container">
+            <div class="workout-item">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ImI63BUUPwU" title="30 Min CARDIO WORKOUT at Home [LOW IMPACT STEADY STATE] LISS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>30 Min CARDIO WORKOUT at Home [LOW IMPACT STEADY STATE] LISS</p>
+            </div>
+           
+            <div class="workout-item">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/cZyHgKtK75A" title="Cardio Workout At Home - 30 Min Aerobic Exercise" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>Cardio Workout At Home - 30 Min Aerobic Exercise</p>
+            </div>
+            
+            <div class="workout-item">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/melA7IB117I" title="Non Stop Cardio Workout Low Impact | Walk at Home Workout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>Non Stop Cardio Workout Low Impact | Walk at Home Workout</p>
+            </div>
+        </div> 
     </section>
 
     <footer>
         <p>&copy; 2024 FitHub - All Rights Reserved</p>
     </footer>
-
     <!-- Link the external JavaScript file -->
-    <script src="scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
