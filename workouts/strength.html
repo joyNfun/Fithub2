@@ -3,42 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - FitHub</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Workouts - FitHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <img src="images/logo.png" alt="FitHub Logo" class="logo">
+            <img src="../images/logo.png" alt="FitHub Logo" class="logo">
             <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
                     <li><a href="workouts.html">Workouts</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="../programs/programs.html">Programs</a></li>
+                    <li><a href="../faq/faq.html">FAQ</a></li>
+                    <li><a href="../contact/contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="content">
-        <h2>Workouts</h2>
-        <p>Coming soon .........</p>
-        <br>
-        <br>
-        <br>
-        
-       
+        <h2>Workouts - Strength Training</h2>
+        <div class="workout-video-container">
+            <!-- First Video -->
+            <div class="workout-video">
+                <iframe src="https://www.youtube.com/embed/tj0o8aH9vJw" 
+                    title="30 minute NO REPEAT Full Body Strength Training" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                <p>30 minute NO REPEAT Full Body Strength Training</p>
+            </div>
+            
+            <!-- Second Video -->
+            <div class="workout-video">
+                <iframe src="https://www.youtube.com/embed/jFVN1g7_6yY" 
+                    title="BEST Strength Training Routine for Women Over 40 (+ Free Workout Plan!)" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                <p>BEST Strength Training Routine for Women Over 40 (+ Free Workout Plan!)</p>
+            </div>
+
+            <!-- Third Video -->
+            <div class="workout-video">
+                <iframe src="https://www.youtube.com/embed/a4mOX9mW0kk" 
+                    title="Using Strength Training to Lose Weight" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                <p>Using Strength Training to Lose Weight</p>
+            </div>
+        </div> 
     </section>
 
     <footer>
         <p>&copy; 2024 FitHub - All Rights Reserved</p>
     </footer>
-
-    <!-- Link the external JavaScript file -->
-    <script src="scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
